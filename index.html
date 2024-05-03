@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNO I Programación Web I</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d|3d-float|fire-animation|outline|shadow-multiple|outline|splintered|shadow-multiple	"
+          href="https://fonts.googleapis.com/css?family=Tangerine"
+          href="https://fonts.googleapis.com/css?family=Gabriela">
+    <style>
+        
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            margin: 0;
+            background:linear-gradient(to bottom, #FFF,#000);
+            background-color: #f4f4f4;
+            color: #ffffff;
+        }
+        p{
+            font-family: 'Tangerine', serif;
+            margin: 0;
+            font-size: 20px;
+        }
+        header {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    background-color: #ffffff; 
+    overflow: hidden; 
+}
+
+    header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('header.png'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); 
+    z-index: -1; 
+}
+
+
+    header {
+    position: relative;
+    z-index: 1;
+}
+footer{
+    text-align: center;
+    background:linear-gradient(to bottom, #FFF,#000);
+            padding: 30px;
+            color: #fff;
+}
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+            width: 200px;
+            overflow: hidden;
+        }
+        nav ul li:hover, nav ul li:focus-within {
+            transform: translateY(-5px);
+            box-shadow: 0 60px 60px rgba(248, 3, 3, 0.3);
+        }
+        nav ul li:focus-within, nav ul li a:active {
+            background-color: #e8f0fe; /* Color de fondo suave al seleccionar */
+        }
+        .tarjeta-imagen {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        nav ul li a {
+            color: #007bff;
+            text-decoration: none;
+            display: block;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul li a small {
+            display: block;
+            margin-top: 10px;
+            color: #666;
+        }
+        .aside-container {
+            display: flex;
+            align-items: center; 
+            justify-content: space-between; 
+            margin: 40px; 
+        }
+        aside {
+            flex: 1; 
+        }
+        .profile-image {
+            flex: 0 1 auto; 
+            margin-left: 40px; 
+            border-radius: 80%; 
+            width: 200px; 
+            height: 200px;
+        }
+        @media screen and (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+        }
+        .content {
+            display: none;
+            padding: 0 20px 20px 20px;
+             background-image: url(fondoestrellado.jfif);
+            margin: 10px 5%;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .section-title {
+            font-family: 'Gabriela', serif;
+            font-size: 25px;
+            cursor: pointer;
+            user-select: none;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            
+        }
+   
+    </style>
+</head>
+<body>
+    <header>
+       
+        <div class="font-effect-3d-float" style=" list-style: circle;"><h1><center>CNO I Programación Web I</center></h1></div>
+        <div class="font-effect-shadow-multiple	" style=" list-style: circle;"><p><center>Sagahon Arredondo Cristian Adair</center></p></div>
+    </header>
+    <nav>
+        <div class="font-effect-fire-animation" style=" list-style: circle;"><h2><center>PORTAFOLIO DE EVIDENCIAS</center></h2></div>
+        <div class="main-content">
+            <div class="section-title" onclick="toggleSection('parcial1')">Primer Parcial</div>
+            <div class="content" id="parcial1">
+                <p>Contenido del Primer Parcial:</p>
+                <ul>
+                    <li>
+                        <a href="practica1.html">
+                            <iframe src="practica1.html" width="150px" height="100px"></iframe>
+                            Práctica 1<br>
+                    </li>
+                    <li>
+                        <a href="practica2.html">
+                            <iframe src="practica2.html" width="150px" height="100px"></iframe>
+                        Práctica 2<br>
+                    </li>
+                    <li>
+                        <a href="practica3.html">
+                            <iframe src="practica3.html" width="150px" height="100px"></iframe>
+                            Práctica 3<br>
+                    </li>
+                    <li>
+                        <a href="practica4.html">
+                                <iframe src="practica4.html" width="150px" height="100px"></iframe>
+                              Práctica 4<br>
+                    </li>
+                    <li>
+                        <a href="practica5.html">
+            
+                                <iframe src="practica5.html" width="150px" height="100px"></iframe>
+                              Práctica 5<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="practica6.html">
+                                <iframe src="practica6.html" width="150px" height="100px"></iframe>
+                              Prática 6<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="practica7.html">
+                            <iframe src="practica7.html" width="150px" height="100px"></iframe>
+                          Práctica 7<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reto1.html">
+                            <iframe src="reto1.html" width="150px" height="100px"></iframe>
+                         Reto 1<br>
+                        </a>
+                    </li>
+                   
+                    <li>
+                        <a href="principal.html">
+                          <iframe src="principal.html" width="150px" height="100px"></iframe>
+                          Iframe<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="infografia.pdf">
+                            <iframe src="infografia.pdf" width="150px" height="100px"></iframe>
+                          Infografía Diseño<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="\sistemasolar\sistemasolar.html">
+                            <img src="sistemasolar.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                            Sistema Solar<br>   
+                        </a>
+                    </li>
+                    <li>
+                        <a href="\reproductor\reproductor.html">
+                            <img src="reproductor1.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                            Reproductor<br>
+                           
+                        </a>
+                    <li>
+                        <a href="formulario.html">
+                            <img src="formulario.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                            Formulario<br>
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://sites.google.com/view/saca2504">
+                            <img src="google.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                            Google Sites<br>
+                         
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://saca2504.my.canva.site/">
+                            <img src="canva.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                            Página de Canva<br>
+        
+                        </a>
+                    </li>
+                    <li>
+                        <a href="\Examen\razas.html">
+                            <img src="razas.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                            Examen<br>   
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="section-title" onclick="toggleSection('parcial2')">Segundo Parcial</div>
+            <div class="content" id="parcial2">
+                <p>Contenido del Segundo Parcial:</p>
+                <ul>
+                    <li>
+                        <a href="\Practica1\practica1.html">
+                             <img src="htmlcss1.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                            1.- Práctica 1 Y 2 css <br> </img>
+                     </li>
+                     <li>
+                        <a href="parcial2reto1.html">
+                             <img src="css1.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                             2.- Reto1Css<br> </img>
+                     </li>
+                     <li>
+                        <a href="\reto2\reto2.html">
+                             <img src="css2.webp" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                             3.- Reto 2<br> </img>
+                     </li>
+                     <li>
+                        <a href="parcial2reto3.html">
+                             <img src="calendario.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                             4.- Reto 3 Horario<br> </img>
+                     </li>
+                     <li>
+                         <a href="\ejemploplantilla\ejemplo.html">
+                             <img src="ejercicio1clase.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                            5.- Ejercicios Clase 1<br>   
+                         </a>
+                     </li>
+                     <li>
+                         <a href="ejercicio2clase.html">
+                             <img src="ejercicioclase2.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                             6.- Ejercicios Clase 2<br>   
+                         </a>
+                     </li>
+                     <li>
+                         <a href="\fuentesdegoogle\fuentesdegoogle.html">
+                             <img src="fuentesgoogle.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                             7.- Tarea 1 Fuentes de Google<br>   
+                         </a>
+                     </li>
+                     <li>
+                         <a href="tablerodeajedrez.html">
+                             <img src="tablerodeajedrez.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                             8.- Tablero de ajedrez<br>
+                             
+                         </a>
+                     </li>
+                     <li>
+                         <a href="\sietebarrios\7barrios.html">
+                             <img src="sanluispotosi.jpeg" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                           9.- 7 barrios de San Luis Potosí<br>   
+                         </a>
+                     </li>
+                      <li>
+                         <a href="infrografiacss.pdf">
+                             <img src="cssyhtml.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                         10.- Infografía<br>   
+                         </a>
+                     </li>
+                     <li>
+                         <a href="\EJERCICIOS\practica1.html">
+                             <img src="estilosavanzados.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                           11.- Estilos avanzados Práctica 1<br>   
+                         </a>
+                     </li>
+                     <li>
+                         <a href="\EJERCICIOS\practica2.html">
+                             <img src="estilosavanzados2.jpeg" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                           11.- Estilos avanzados Práctica 2<br>   
+                         </a>
+                     </li>
+                     <li>
+                         <a href="\EJERCICIOS\practica3.html">
+                             <img src="estilosavanzados3.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                            11.- Estilos avanzandos Práctica 3<br>   
+                         </a>
+                         
+                     </li>
+                      <li>
+                         <a href="\Practica1modcaja\practica1.html">
+                             <img src="cajacss.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                           11.- Estilos avanzados Práctica 1 Modelo de Caja<br>   
+                         </a>
+                         
+                     </li>
+                      <li>
+                         <a href="practica8.html">
+                             <img src="practica12.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                           12.- Práctica 12<br>   
+                         </a>
+                         
+                     </li>
+                       <li>
+                         <a href="practica9.html">
+                             <img src="practica13.jpeg" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                           13.- Práctica 13<br>   
+                         </a>
+                         
+                     </li>
+                     <li>
+                         <a href="\ejerciciosAvanzadosCss\reto1.html">
+                             <img src="reto1fondocss.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                           14.- Ejercicios Avanzados CSS (Reto 1)<br>   
+                         </a>
+                         
+                     </li>
+                     <li>
+                         <a href="\ejerciciosAvanzadosCss\ejercicio1.html">
+                             <img src="ejercicio1fondocss.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                           14.- Ejercicios Avanzados CSS (Ejercicio 1)<br>   
+                         </a>
+                         
+                     </li>
+                     
+                     <li>
+                         <a href="\ejerciciosAvanzadosCss\londres.html">
+                             <img src="museosdelondres.gif" width="150px" height="100px" alt="Descripción de la imagen" class="tarjeta-imagen">
+                           14.- Ejercicios Avanzados CSS (Museos de Londres)<br>   
+                         </a>
+                         
+                     </li>
+                     
+                     <li>
+                        <a href="\revistas-informatica-3\revistas.html">
+            
+                                <iframe src="\revistas-informatica-3\revistas.html" width="150px" height="100px"></iframe>
+                              15.- Aplicación de estilos avanzados<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="\animaciones\animacion.html">
+            
+                                <iframe src="\animaciones\animacion.html" width="150px" height="100px"></iframe>
+                              16.- Animaciones y Transformaciones en CSS (Animación 1)<br>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="\animaciones\animacion2.html">
+            
+                                <iframe src="\animaciones\animacion2.html" width="150px" height="100px"></iframe>
+                              16.- Animaciones y Transformaciones en CSS (Animación 2)<br>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="\animaciones\transformar.html">
+            
+                                <iframe src="\animaciones\transformar.html" width="150px" height="100px"></iframe>
+                              16.- Animaciones y Transformaciones en CSS (Transformar 1)<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="\animaciones\transformar2.html">
+            
+                                <iframe src="\animaciones\transformar2.html" width="150px" height="100px"></iframe>
+                              16.- Animaciones y Transformaciones en CSS (Transformar 2)<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="\menuAnimado\menu.html">
+            
+                                <iframe src="\menuAnimado\menu.html" width="150px" height="100px"></iframe>
+                              17.- Menu Animado<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="\ExamenpracticoVersionB\peakoil.html">
+            
+                                <iframe src="\ExamenpracticoVersionB\peakoil.html" width="150px" height="100px"></iframe>
+                              18.- Examen Práctico Segundo Parcial<br>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-title" onclick="toggleSection('parcial3')">Tercer Parcial</div>
+            <div class="content" id="parcial3">
+                    <li>
+                        <a href="\Parcial3\practica1\ejercicio1js.html">
+            
+                                <iframe src="\Parcial3\practica1\ejercicio1js.html" width="150px" height="100px"></iframe>
+                             1.GENERADOR DE PARRAFOS<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="practica8\index.html">
+            
+                                <iframe src="practica8\index.html" width="150px" height="100px"></iframe>
+                            2. SOLICITAR #FILAS Y # DE COLUMNAS E IMPRIMIR EN TABLA HTMLbr>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="\Parcial3\practica1\tabla.html">
+            
+                                <iframe src="\Parcial3\practica1\tabla.html" width="150px" height="100px"></iframe>
+                             3.  SOLICITAR #FILAS Y # DE COLUMNAS, CARACTER A IMPRIMIR E IMPRIMIR EN TABLA HTML<br>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="\Parcial3\practica4\index.html">
+            
+                                <iframe src="\Parcial3\practica4\index.html" width="150px" height="100px"></iframe>
+                             4. SOLICITAR #FILAS Y # DE COLUMNAS, E IMPRIMIR EN TABLA HTML UNA IMAGEN EN CADA CELDA<br>
+                        </a>
+                    </li>
+                      <li>
+                        <a href="\Parcial3\practica3\index.html">
+            
+                                <iframe src="\Parcial3\practica3\index.html" width="150px" height="100px"></iframe>
+                             5. SOLICITAR #FILAS Y # DE COLUMNAS E IMPRIMIR EN TABLA HTML CON NUMEROS ALEATORIOS DEL 1-100<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="\Parcial3\practica2\index.html">
+            
+                                <iframe src="\Parcial3\practica2\index.html" width="150px" height="100px"></iframe>
+                             6. VALIDAR USUARIO Y PASSWORD "admin"<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="\Parcial3\practica1\practica5Arreglo\index.html">
+            
+                                <iframe src="\Parcial3\practica1\practica5Arreglo\index.html" width="150px" height="100px"></iframe>
+                             7.CONVERTIDOR TEMPERATURAS °C A °F Y °K<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="practica7\index.html">
+            
+                                <iframe src="practica7\index.html" width="150px" height="100px"></iframe>
+                             8. MENU DE ARREGLOS<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="menuconpracticas\index.html">
+            
+                                <iframe src="menuconpracticas\index.html" width="150px" height="100px"></iframe>
+                             9. MENU <br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="practica10\ejercicio10.html">
+            
+                                <iframe src="practica10\ejercicio10.html" width="150px" height="100px"></iframe>
+                            10. GENERADOR DE COORDENADAS<br>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="practica10\ejercicio11.html">
+            
+                                <iframe src="practica10\ejercicio11.html" width="150px" height="100px"></iframe>
+                            11.  GEOLOCALIZACIÓN<br>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="practica10\ejercicio12.html">
+            
+                                <iframe src="practica10\ejercicio12.html" width="150px" height="100px"></iframe>
+                            12. SISTEMA DE ALERTA<br>
+                        </a>
+                    </li>
+                            <li>
+                        <a href="practica10\ejercicio13.html">
+            
+                                <iframe src="practica10\ejercicio13.html" width="150px" height="100px"></iframe>
+                            13. CANVAS<br>
+                        </a>
+                    </li>
+                         <li>
+                        <a href="practica10\ejercicio14.html">
+            
+                                <iframe src="practica10\ejercicio14.html" width="150px" height="100px"></iframe>
+                           14. API GRAFICAS<br>
+                        </a>
+                    </li>
+                      <li>
+                        <a href="practica10\ejercicio15.html">
+            
+                                <iframe src="practica10\ejercicio15.html" width="150px" height="100px"></iframe>
+                           15. API GRAFICA SINUSOIDAL<br>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="practica10\ejercicio16.html">
+            
+                                <iframe src="practica10\ejercicio16.html" width="150px" height="100px"></iframe>
+                           16. API GRAFICA BARA DE COLORES<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="practica10\RETO1.html">
+            
+                                <iframe src="practica10\RETO1.html" width="150px" height="100px"></iframe>
+                           17. RETO 1<br>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="practica10\reto2.html">
+            
+                                <iframe src="practica10\reto2.html" width="150px" height="100px"></iframe>
+                           18. RETO2 <br>
+                        </a>
+                    </li>
+                </div>
+                </div>
+        <main>
+
+
+            <div class="aside-container">
+            <aside>
+                <blockquote>
+                <h2 style="list-style: circle; color: #ffffff;">¿Quién soy?</h2>
+                <p style="list-style: circle; color: #ffffff;">Mi nombre es Cristian Adair Sagahon Arredondo y soy un estudiante de ingeniería de tecnologías de la información de segundo semestre, y este es mi portafolio de actividades de la materia de <b>Programación Web</b>.</p>
+                <p style="list-style: circle; color: #ffffff;">Me apasiona aprender cosas nuevas todos los días, me llama la atención lo que es la cibersiguridad y programación web, me gustaria despeñarme como front end en una empresa.</p>
+            </blockquote>
+            </aside>
+            <img src="fotoportafolio.jpg" alt="Descripción de la imagen" class="profile-image">
+        </div>
+            <article>
+                <div class="font-effect-3d" style=" list-style: circle;"><h2><center>Certificaciones</center></h2></div>
+                <p style="font-family:'Tangerine', serif; list-style: circle; color: #ffffff "><center>Estas son algunas certificaciones con las cuento hasta la actualidad</center></p>
+                <ul style="list-style: circle; color: #080808;">
+                <li>Microsoft word 2019</li>
+                    <li>Microsoft excel 2019</li>
+                    <li>Microsoft powerpoint 2019</li>
+                    <li>C1 Ef certificate</li>
+                  
+              
+                </ul>
+            </article>
+            <center>
+            <section>
+                <div class="font-effect-3d-float" style=" list-style: circle;"><h2><center>Algunos videos que te prodrían interesar</center></h2></div>
+                <p style="list-style: circle; color: #ffffff;">Estos videos te serán utiles para tu formación de programador</p>
+            </section>
+           
+            <section id="youtube" style="list-style: circle;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rnmbxqS1nRo?si=z85El1At51IAi_lk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MJkdaVFHrto?si=7J1Ps78lp645tcQV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </section>
+        </center>
+        </main>
+        <footer>
+            <p><b>Web master</b>: <i><a href="mailto:184661@upslp.edu.mx">184661@upslp.edu.mx</a></i></p>
+            <p><b>Numero de celular</b>: 4443120867</i></p>
+            
+            <div class="social-icons">
+                <a href="https://facebook.com">Facebook</a> |
+                <a href="https://twitter.com">Twitter</a> |
+                <a href="https://instagram.com">Instagram</a>
+            </div>
+            <p><i>Derechos de autor Cristian Adair Sagahon Arredondo &copy; 2024. Todos los derechos reservados. 24/04/2024</i></p>
+        </footer>
+        <script>
+            function toggleSection(id) {
+                var section = document.getElementById(id);
+                var displayStatus = section.style.display;
+                section.style.display = displayStatus === 'block' ? 'none' : 'block';
+            }
+        </script>
+    </body>
+    </html>

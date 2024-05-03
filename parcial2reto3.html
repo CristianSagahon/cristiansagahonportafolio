@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!--El uso de los ids es solo para un solo elemento-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: rgb(85, 134, 241);
+        }
+        td,th{
+           border: 1px solid; 
+        }
+        th{
+            background-color: aqua;
+        }
+       .web{
+        background-color: red;
+        color: white;
+       }
+       .math{
+        background-color: rgb(177, 63, 230);
+        color: white;
+       }
+       .english{
+        background-color: lightblue;
+        color: rgb(29, 57, 214);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-style: initial;
+       }
+       .progra1{
+        background-color: burlywood;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: italic;
+       }
+       .physic{
+        background-color: brown;
+        color: orange;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-style: oblique;
+       }
+       .nucleo{
+        background-color: yellow;
+        color: orangered;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-style: italic;
+       }
+       .labprogra{
+        background-color: blueviolet;
+        color: rgb(255, 255, 255);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-style: italic;
+       }
+       .labfisica{
+        background-color: rgb(39, 202, 24);
+        color: rgb(255, 255, 255);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-style: italic;
+       }
+       .titulo{
+        font-size: 35px;
+        color: brown;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+       }
+       .relleno{
+        background-color: rgb(99, 230, 153);
+       }
+    
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Mi horario de clase</h1>
+    <table>
+        <tr>
+            <th>Hora</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miercoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+        </tr>
+        <tr>
+            <th>7:00 a 8:00</th>
+            <td class="english"> Ingles VI </td>
+            <td class="english">Ingles VI </td>
+            <td class="english">Ingles VI </td>
+            <td class="english"> Ingles VI </td>
+            <td class="english"> Ingles VI </td>
+        </tr>
+        <tr>
+            <th>8:00 a 9:00 </td>
+            <td class="progra1"> Programacion 1 </td>
+            <td class="progra1"> Programacion 1 </td>
+            <td class="progra1"> Programacion 1 </td>
+            <td class="progra1"> Programacion 1 </td>
+            <td class="progra1"> Programacion 1 </td>
+
+        </tr>
+        <tr>
+            <th>9:00 a 10:00 </td>
+            <td class="physic">Física 1</td>
+            <td class="physic">Física 1</td>
+            <td class="physic">Física 1</td>
+            <td class="physic">Física 1</td>
+            <td class="physic">Física 1</td>
+        </tr>
+        <tr>
+            <th>10:00 a 11:00 </td>
+            <td class="math">Matemáticas 1</td>
+            <td class="math">Matemáticas 1</td>
+            <td class="math">Matemáticas 1</td>
+            <td class="math">Matemáticas 1</td>
+            <td class="math">Matemáticas 1</td>
+        </tr>
+        <tr>
+            <th>11:00 a 12:00 </td>
+            <td class="web">Progamación Web 1</td>
+            <td class="web">Programación Web 1</td>
+            <td class="web">Programación Web 1</td>
+            <td class="web">Programación Web 1</td>
+            <td class="web">Programación Web 1</td>
+        </tr>
+        <tr>
+            <th>12:00 a 13:00 </td>
+            <td class="nucleo">Nucleo 2</td>
+            <td class="nucleo">Nucleo 2</td>
+            <td class="nucleo">Nucleo 2</td>
+            <td class="nucleo">Nucleo 2</td>
+            <td class="nucleo">Nucleo 2</td>
+        </tr>
+        <tr>
+            <th>13:00 a 14:00 </td>
+                <td class="relleno"></td>
+            <td class="labfisica">Laboratorio de Física</td>
+            <td class="relleno"></td>
+            <td class="relleno"></td>
+            <td class="relleno"></td>
+        </tr>
+        <tr>
+            <th>14:00 a 15:00 </td>
+            <td class="labprogra">Laboratorio Programacion 1</td>
+            <td class="labfisica">Laboratorio de Física</td>
+            <td class="relleno"></td>
+            <td class="relleno"></td>
+            <td class="relleno"></td>
+        </tr>
+        <tr>
+            <th>15:00 a 14:00 </td>
+             <td class="labprogra">Laboratorio Programación 1</td>
+            <td class="relleno"></td>
+            <td class="relleno"></td>
+            <td class="relleno"></td>
+            <td class="relleno"></td>
+        </tr>
+    </table>
+</body>
+</html>

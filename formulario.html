@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body >
+    <h1>Formulario de Primer Contacto de Tutorias</h1>
+    <h3>Debe ser llenado por el tutelado</h3>
+    <form action="mailto:liliana.gamez@upslp.edu.mx" method="post"> <!-- avtion se puede usar mailto, pagina y procesar informacion--> 
+        <p>Nombre: <input type="text" name="nombre" size="40"></p><!--method post esta protegido y el get es desprotegido-->
+        <p>Matricula: <input type="number" name="Matricula" min="180000"></p>
+        <p>Semestre:
+          <input type="radio" name="semestre" value="1"> 1
+          <input type="radio" name="semestre" value="2"> 2
+          <input type="radio" name="semestre" value="3"> 3
+          <input type="radio" name="semestre" value="4"> 4
+          <input type="radio" name="semestre" value="5"> 5
+          <input type="radio" name="semestre" value="6"> 6
+          <input type="radio" name="semestre" value="7"> 7
+          <input type="radio" name="semestre" value="8"> 8
+          <input type="radio" name="semestre" value="9"> 9
+          <input type="radio" name="semestre" value="9+"> 9+
+         
+
+        </p>
+        <p>Fecha: <input type="date" name="Fecha"></p>
+        
+        <p>Materia1: <input type="text" name="mat1" size="50"></p>
+        <p>Materia2: <input type="text" name="mat2" size="50"></p>
+        <p>Materia3: <input type="text" name="mat3" size="50"></p>
+        <p>Materia4: <input type="text" name="mat4" size="50"></p>
+        <p>Materia5: <input type="text" name="mat5" size="50"></p>
+        <p>Materia6: <input type="text" name="mat6" size="50"></p>
+        <p>Materia7: <input type="text" name="mat7" size="50"></p>
+        <p>Calificacion de Materia 1: <input type="number" name="cal1" size="50" min="0" max="10" step="0.1"></p>
+        <p>Calificacion de Materia 2: <input type="number" name="cal2" size="50" min="0" max="10" step="0.1"></p>
+        <p>Calificacion de Materia 3: <input type="number" name="cal3" size="50" min="0" max="10" step="0.1"></p>
+        <p>Calificacion de Materia 4: <input type="number" name="cal4" size="50" min="0" max="10" step="0.1"></p>
+        <p>Calificacion de Materia 5: <input type="number" name="cal5" size="50" min="0" max="10" step="0.1"></p>
+        <p>Calificacion de Materia 6: <input type="number" name="cal6" size="50" min="0" max="10" step="0.1"></p>
+        <p>Calificacion de Materia 7: <input type="number" name="cal7" size="50" min="0" max="10" step="0.1"></p>
+        <p>CUAL FUE EL MOTIVO POR EL QUE REPORBASTE LAS MATERIAS</p>
+        <p><textarea name="motivo" rows="4" cols="20" placeholder="Aqui va tu comentario" ></textarea></p><!--placeholder es para poner un cuadro de texto-->
+        <p>COMO CONSIDERAS TU RENDIMIENTO EN GENERAL: MALO, REGULAR, BUENO, EXCELENTE (SELECTOR ):
+          <select name="des"><!--Lista desplegable para-->  
+            <option></option>
+            <option>Malo</option>
+            <option>Regular</option>
+            <option>Bueno</option>
+            <option>Excelente</option>
+          </p>
+        </select>
+        <p>
+          <input type="submit" value="Enviar">
+          <input type="reset" value="Borrar">
+        </p>
+      </form>
+      <a href="index.html"><img src="regreso.png" width="50px" height="50px"></a>
+</body>
+</html>
