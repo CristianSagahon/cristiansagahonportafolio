@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+  background-image: url(fond.avif);
+  
+}
+div{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: tierra;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+
+#sol{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: relative;
+  animation: sol 6s linear infinite;
+}
+@keyframes sol {
+  from{
+    transform: rotate(0deg) ;
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+/* Definición de la animación para orbitar */
+@keyframes tierra {
+  from {
+    transform: rotate(0deg) translateX(90px)translateY(130px);/* Ajusta según el radio deseado */
+  }
+  to {
+    transform: rotate(360deg) translateX(90px) translateY(130px);
+  }
+}
+
+#tierra{
+  margin-right: 50%;
+  margin-top: 250px;
+  top: 0;
+  left: 50%; /* Centra el objeto en órbita respecto al principal */
+  transform-origin: -50px 50%; /* Ajusta para cambiar el punto de origen de la rotación */
+  animation: tierra 5s linear infinite; /* Ajusta la duración según necesites */
+}
+
+.sol{
+ margin-top: 20%;
+  width: 180px;
+}
+.tierra{
+  width: 70px;
+}
+h1{
+  color: #fff;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>Sol y Tierra</h1>
+
+<div id="tierra">
+<img  class="tierra" src="tierra.webp" alt="sol">
+</div>
+
+<div id="sol">
+<img class="sol" src="sol.png" alt="tierra">
+</div>
+
+</body>
+</html>
+
+

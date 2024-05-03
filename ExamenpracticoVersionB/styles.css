@@ -1,0 +1,103 @@
+body{
+    background: rgb(206, 204, 204);
+}
+h1{
+    font-family:serif ;
+    font-variant: small-caps;
+    letter-spacing: 15px;
+    padding-left: 1095px;
+    font-size:50px;
+   
+}
+.border{
+    background: rgb(236, 231, 231);
+    margin-left: 280px;
+    margin-right: 280px;
+    border-radius: 0 0 5px 5px ;
+    padding-bottom:8px;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background: rgb(123, 115, 115);
+    font-size: 22px;
+    border-radius: 5px 5px 0px 0px;
+    padding-left: 7px;
+    padding-top: 3px;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    text-indent:40px;
+    margin-left: 9px;
+    margin-right: 9px;
+}
+
+.img1{
+    padding-left: 42%;
+}
+.img2{
+    padding-left: 35%;
+}
+.img3{ 
+    width: 70px;
+    height: 55px;
+    float: right;
+    padding-right: 20px;
+    padding-left: 20px;
+    object-position: center;
+    
+}
+span{
+    font-variant: small-caps;
+    font-weight: bold;
+}
+.formato{
+    font-style: italic;
+    color: #f00;
+}/*rgb(233, 181, 9)*/
+hr{
+    height: 5px;
+    border: none;
+    background-color: rgb(233, 181, 9);
+    outline:.5px solid #000;
+    width: 600px;
+    text-align: center;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background:rgb(170, 159, 159);
+    color: #fff;
+    padding-left: 7px;
+}
+.segundacaja{
+    background: rgb(245, 241, 241);
+    margin-top: 10px;
+    margin-left:30px;
+    margin-right: 25px;
+    
+}
+.footer{
+    background: rgb(249, 201, 9);
+    margin-left: 280px;
+    margin-right: 280px;
+    line-height: 1.5;
+}
+.pfooter{
+    text-align: left;
+    text-indent:0px;
+    font-family:cursive;
+    font-size: 16px;
+    font-weight: 550;
+}
+.cajaopciones{
+    background: #fff;
+    float: left;
+    box-shadow: 1px 1px 4px 1px;
+    margin-left: 175px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejemplo. Sagahon Arredondo Cristian Adair 184661 Ejercicios. Páginas web HTML y hojas de estilo CSS. Bartolomé Sintes Marco. www.mclibre.org</title>
+<style>
+  body{
+    background-color:#e9dfdf;
+    margin: 0;
+  padding: 20px;
+  }
+.titles{
+  color: black;
+  font-family:sans-serif;
+  font-size: 50px;
+text-align: center;
+}
+.firsttitle{
+  text-align: left;
+  color: white;
+  background-color: grey;
+  size: 30px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 10px;
+}
+.p1{
+  text-align:right;
+  margin-left: 60px;
+  margin-right: 60px;
+  font-size: 20px;
+}
+.p2{
+  margin-left: 60px;
+  margin-right: 60px;
+  font-size: 20px;
+}
+.contenedor{
+    padding: 20px;
+    overflow: hidden;
+}
+.image-container {
+  float: left; /* Hacer que la imagen flote a la izquierda */
+  margin-left: 140px ;
+  margin-right: 50px; /* Ajusta el espacio entre la imagen y el texto */
+  margin-bottom: 50px; /* Ajustar según sea necesario */
+        }
+  img {
+    width: 115px;
+      height: 150px;
+      display: block;
+      }
+  .section {
+    margin-bottom: 20px;
+  }
+  .letraroja{
+    color: red;
+    
+  }
+  .fondoletra{
+    background-color: rgb(255, 249, 249);
+  }
+</style>
+</head>
+
+<body>
+  <h1 class="titles">HTML y CSS</h1>
+  <h2 class="firsttitle">HTML</h2>
+  <div class="contenedor section">
+    <div class="image-container">
+      <img src="html5-logo.svg" alt="Logotipo de HTML5">
+    </div>
+  <p class="p2">Entre 1995 y 2001 el W3C normalizó y desarrolló el HTML a través de varias versiones (HTML 2, 3, 4, XHTML 1.0).Pero su apuesta radical por el XML provocó en 2004 la creación del WHATWG por parte de los fabricantes de navegadores para continuar el desarrollo del HTML "clásico". En 2007 el W3C reconoció el fracaso del XML e intentó reintegrar el trabajo del WHATWG. Así, en <i class="letraroja">octubre de 2014</i> el W3C aprobó la <b class="fondoletra">recomendación HTML 5</b>, seguida por el HTML 5.1 y el HTML 5.2 en 2016 y 2017.</p>
+  <p class="p1">Pero la verdad es que el desarrollo real del HTML ya sólo se producía en el WHATWG. Por ello, en mayo de 2019, el W3C acordó con el WHATWG dejar definitivamente en manos del WHATWG el desarrollo del HTML. El WHATWG no publica versiones de sus normas, sino que mantiene una norma única, HTML living standard, que se actualiza constantemente.</p>
+
+</div>
+
+<div class="clear"></div> <!-- Añadir para limpiar el float -->
+  
+  <h2 class="firsttitle">CSS</h2>
+  <div class="contenedor section">
+    <div class="image-container">
+      <img src="css3-logo.svg" alt="Logotipo de CSS3">
+    </div>
+  <p class="p2">En 1996 y 1998 el W3C aprobó las recomendaciones sobre hojas de estilo CSS 1 y CSS 2, pero a continuación el desarrollo de las CSS estuvo bloqueado casi diez años. En <i class="letraroja">2008</i>, el W3C retomó el trabajo en la siguiente generación de las hojas de estilo, las <b class="fondoletra">recomendaciones CSS 3</b>, que se planificaron como un conjunto de recomendaciones en vez de como un documento único.</p>
+  <p class="p2">Pero el proceso está resultando mucho más largo de lo esperado y sólo algunas partes de CSS 3 ya están implementadas en los principales navegadores.</p>
+
+</div>
+<div class="clear"></div> <!-- Añadir para limpiar el float -->
+</body>
+</html>

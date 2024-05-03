@@ -1,0 +1,69 @@
+body {
+  padding: 0 50px;
+  background-color: #FAF3E0; /* Un fondo claro y cálido */
+  font-family: 'Arial', sans-serif;
+  text-align: justify;
+}
+
+h1 {
+  color: #8B5D33; /* Marrón suave para el título principal, evocando tierra/naturaleza */
+  font-family: "Sigmar One", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
+  color: #A76F42; /* Un tono marrón más claro para los subtítulos */
+  font-family: "Sigmar One", sans-serif;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 4px #CCCCCC; /* Sombra suave para profundidad */
+}
+
+strong {
+  background-color: #FBEADC; /* Un tono piel suave para destacar texto */
+  color: #D35400; /* Naranja quemado para llamar la atención */
+}
+
+i {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: underline; /* Mantener para énfasis */
+}
+
+time {
+  color: #5D4037; /* Marrón chocolate, buen contraste con el fondo */
+}
+
+img {
+  border: 5px solid #D3D3D3; /* Gris claro para no distraer, pero destacar las imágenes */
+  padding: 5px;
+}
+
+img.izquierda {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+img.derecha {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+hr {
+  clear: both;
+  width: 66%;
+  height: 5px;
+  border: none;
+  border-radius: 5px;
+  margin: 40px auto;
+  background-color: #A76F42; /* Un tono marrón claro, coherente con los subtítulos */
+}
+
+address {
+  text-align: right;
+  font-style: normal;
+  color: #5D4037; /* Marrón chocolate para información de contacto */
+}

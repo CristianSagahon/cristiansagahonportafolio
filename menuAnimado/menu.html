@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transición de imagen con CSS</title>
+    <style>
+        /* Estilos básicos para la imagen */
+        .boton {
+            width: 220px; /* Ancho inicial */
+            height: 60px;
+            transition: width 0.5s; /* Transición suave */
+            border: 1px solid #0005;
+            background: linear-gradient(to right, yellow, #fff);
+            font-family: sans-serif;
+            color: #000000;
+            font-size: 40px;
+            margin: 20px 25px; 
+            text-align: center;
+            display:inline-block; /* Para que los botones estén uno al lado del otro */
+        }
+
+        /* Cambio de tamaño al hacer hover */
+        .boton:hover {
+            border: 1px solid grey;
+            background: linear-gradient(to left, orange, #fff);
+            transition: width 0.5s; /* Transición suave */
+            width: 240px; /* Ancho al hacer hover */
+            height: 100px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 50px;
+            color: #000;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+       span{
+            margin: 40%;
+            background: linear-gradient(rgb(255, 215, 0), white);
+            box-sizing: content-box;
+            font-size:90px;
+        }
+    </style>
+</head>
+<body>
+   <span>Bienvenidos</span>
+    <br>
+    <div class="boton">
+        <a href="https://www.upslp.edu.mx/upslp/" target="_blank">Nosotros</a> 
+    </div>
+    <div class="boton">
+        <a href="https://www.upslp.edu.mx/upslp/?page_id=244" target="_blank">Aspirantes</a>
+    </div>
+    <div class="boton">
+        <a href="https://www.upslp.edu.mx/upslp/?page_id=209" target="_blank">Estudiantes</a> 
+    </div>
+    <div class="boton">
+        <a href="https://www.upslp.edu.mx/upslp/?page_id=231" target="_blank">Docentes</a>      
+    </div>
+    <div class="boton">
+        <a href="https://www.upslp.edu.mx/upslp/?page_id=241" target="_blank">Egresados</a>         
+    </div>
+    <div class="boton">
+        <a href="https://www.upslp.edu.mx/upslp/?page_id=10971" target="_blank">Contacto</a>   
+    </div>
+
+</body>
+</html>
+

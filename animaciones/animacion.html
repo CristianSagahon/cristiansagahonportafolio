@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+#animation{
+    animation-delay: 2s;
+    background-image: url(balon.png);
+    height: 150px;
+    width: 150px;
+}
+@keyframes example {
+  0%   { left:0px; top:0px; transform: rotateZ(35deg);}
+  25%  {left:200px; top:0px;transform:  rotateZ(40deg);}
+  50%  {left:200px; top:200px; transform: rotateZ(50deg);}
+  75%  {left:0px; top:200px; transform: rotateZ(60deg);}
+  100% {left:0px; top:0px;transform: rotateZ(80deg);}
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Animation</h1>
+
+<p>The animation-delay property specifies a delay for the start of an animation. The following example has a 2 seconds delay before starting the animation:</p>
+
+<div id="animation">
+    <img src="balon.png" alt="">
+</div>
+
+</body>
+</html>
+
+
