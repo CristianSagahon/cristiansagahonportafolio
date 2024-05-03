@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 1</title>
+</head>
+<body>
+    <h1><center>JUEGO DEL AHORCADO</center></h1>
+    <p><button onclick="dibujar()">Dibujar</button></p>
+    <p><button onclick="limpiar()">Limpiar</button></p>  
+    <p>Intenta adivinar la palabra:</p>
+    <p id="wordToGuess"></p>
+    <p>
+        <label for="guess">Ingresa una letra:</label>
+        <input type="text" id="guess" maxlength="1">
+        <button onclick="makeGuess()">Adivinar</button>
+    </p>
+    <p id="message"></p>
+    <canvas id="myCanvas" width="400" height="400" style="border: 1px solid #000;">Sorry, your browser does not support canvas.</canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+        let words = ['murcielago'];
+        let selectedWord = words[Math.floor(Math.random() * words.length)];
+        let guessedLetters = Array(selectedWord.length).fill('_');
+        let attempts = 6;
+        function torzo() {
+            // Rectángulo del torso
+            if(selectedWord!=guessedLetters)
+            ctx.fillStyle = 'red';
+            ctx.fillRect(200, 140, 5, 150);  // Ajusta el tamaño si es necesario para mejor proporción
+        }
+        function dibujarcabeza(){
+        // Círculo para la cabeza
+        ctx.beginPath();
+            ctx.fillStyle = 'blue';
+            ctx.arc(200, 100, 40, 0, Math.PI * 2, true);
+            ctx.fill();
+        }
+             // Brazos
+        function dibujarbrazoIzq(){
+            ctx.beginPath();
+            ctx.moveTo(205, 180); // Centro del torso para brazos
+            ctx.lineTo(140, 210); // Brazo izquierdo
+        }
+        function dibujarbrazoDer(){
+            ctx.beginPath();
+            ctx.moveTo(200, 180);
+            ctx.lineTo(245, 215); // Brazo derecho
+            ctx.stroke();
+        }
+        // Piernas 
+        function dibujarpiernaIzq(){
+        
+        ctx.beginPath();
+            ctx.moveTo(200, 290); // Desde la parte baja del torso, ajustado más abajo
+            ctx.lineTo(150, 340); // Pierna izquierda
+        }
+        function dibujarpiernaDer(){
+            ctx.beginPath();
+        ctx.moveTo(205, 290);
+            ctx.lineTo(250, 340); // Pierna derecha
+            ctx.stroke();
+        }
+
+        // Función para limpiar el canvas
+        function limpiar() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+        document.getElementById('wordToGuess').textContent = guessedLetters.join(' ');
+
+function makeGuess() {
+    let guessInput = document.getElementById('guess');
+    let letter = guessInput.value.toLowerCase();
+    guessInput.value = ''; // Limpia el campo de entrada
+
+    if (letter.length === 1 && /^[a-zA-ZñÑ]$/.test(letter)) { // Asegura que sea una letra
+        if (!selectedWord.includes(letter)) {
+            attempts--;
+            updateMessage(`Incorrecto, te quedan ${attempts} intentos.`);
+            dibujarcabeza();
+            if (attempts === 0) {
+                updateMessage('Game Over! La palabra era: ' + selectedWord);
+                return;
+            }
+        } else {
+            
+            updateGuessedLetters(letter);
+        }
+    } else {
+        
+        updateMessage('Por favor, introduce una letra válida.');
+    }
+}
+
+function updateGuessedLetters(letter) {
+    let hasUpdated = false;
+
+    selectedWord.split('').forEach((char, index) => {
+        if (char === letter && guessedLetters[index] === '_') {
+            guessedLetters[index] = letter;
+            hasUpdated = true;
+        }
+    });
+
+    document.getElementById('wordToGuess').textContent = guessedLetters.join(' ');
+
+    if (!guessedLetters.includes('_')) {
+        updateMessage('¡Felicidades! Has adivinado la palabra.');
+    } else if (hasUpdated) {
+        updateMessage('Bien hecho, sigue así!');
+    }
+}
+
+function updateMessage(msg) {
+    document.getElementById('message').textContent = msg;
+}
+
+    </script>
+</body>
+</html>
