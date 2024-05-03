@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 1</title>
+    <link rel="StyleSheet" href="css\estilo.css" type="text/css">
+</head>
+<body>
+    <center>
+    <h1>POST MALONE</h1>
+    <h2> A THOUSAND BAD TIMES</h2>
+    <img src="media/img1.jpg">
+    <img src="media/img2.jfif">
+    <img src="media/img3.webp">
+    <button id="playAudio">Play Music</button>
+
+    <audio id="backgroundMusic" src="media/A Thousand Bad Times.mp3" loop="loop"></audio>
+    <script>
+      // Obtener referencias al elemento de audio y al botón
+      var backgroundMusic = document.getElementById("backgroundMusic");
+      var playButton = document.getElementById("playAudio");
+
+      // Añadir un evento de clic al botón para controlar la reproducción de la música
+      playButton.addEventListener("click", function() {
+        // Verificar si la música ya está reproduciéndose; si no, reproducirla
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+            playButton.textContent = 'Pause Music'; // Cambiar el texto del botón a "Pause"
+        } else {
+            backgroundMusic.pause();
+            playButton.textContent = 'Play Music'; // Cambiar el texto del botón a "Play" si la música se pausa
+        }
+      });
+    </script>
+    <div class="estrofa">
+    
+    <p>Yeah, oh, whoa, ooh<br>
+    <p>Yeah, yeah</p>
+    <p>Said you needed a ride, but you wanted my car</p>
+    <p>Without that face, girl, you wouldn't get far</p>
+    <p>I really like you, despite who you are, oh (who you are)</p>
+    <p>You see me on TV, you know I'm a star</p>
+    <p>You say you don't know me, but I know that's false</p>
+    <p>I'll pay the price, girl, whatever that cost (what it cost?)</p>
+    <p>You make my life so hard</p>
+    <p>But that's what gets me off</p>
+    </div>
+   
+    
+    <div class="estribillo">
+    <p>I had a thousand bad times    </p>
+    <p>So what's another time to me? (What's that time, yeah)    </p>
+    <p>You try to burn my house down    </p>
+    <p>But what's another house to me? (What's that time, yeah)    </p>
+    <p>'Cause I can take anything that you give me (what you give me)    </p>
+    <p>It's gonna take a lot more to kill me, bitch    </p>
+    <p>So thank you for the grave (yeah)    </p>
+    <p>I needed me a place to sleep (place to sleep)    </p>
+    </div>
+    
+    <div class="estrofa">
+    <p>And I don't wanna meet your mama (no)    </p>
+    <p>She prolly crazier than you (she prolly crazier than you)    </p>
+    <p>I'm gonna need some thicker armor (armor)    </p>
+    <p>To spend another night with you (and on, and on, and on)    </p>
+    <p>Baby, I know just what to do    </p>
+    <p>Every time you fuck me over, I'll come back to you    </p>
+    <p>Baby, I don't want to know the truth (know the truth)    </p>
+    <p>I ignore them when they tell me all the shit you do (shit you do)    </p>
+    <p>I always get my heart broke like I needed the practice (needed)    </p>
+    <p>Foot on my throat 'til my world is collapsin' (damn)    </p>
+    <p>But this what I chose, it's the law of attraction, yeah (attraction)    </p>
+    <p>(And on and on and on)    </p>
+    <p>You make my life so hard (so hard, so hard)    </p>
+    <p>But that's what gets me off    </p>
+    </div>
+  
+    <div class="estribillo">
+    <p>I had a thousand bad times    </p>
+    <p>So what's another time to me? (What's that time, yeah)    </p>
+    <p>You try to burn my house down    </p>
+    <p>But what's another house to me? (What's that time, yeah)    </p>
+    <p>'Cause I can take anything that you give me (what you give me)    </p>
+    <p>It's gonna take a lot more to kill me, bitch    </p>
+    <p>So thank you for the grave (yeah)    </p>
+    <p>I needed me a place to sleep (place to sleep)    </p>
+    </div>
+   
+    <div class="estrofa">
+    <p>I should get out, but I still want more</p>
+    <p>I should get out, what am I waitin' for?    </p>
+    <p>It's all the same to me, it's all a game to me    </p>
+    <p>It's all the same to me, it's all the same    </p>
+
+    </div>
+    
+    <div class="estribillo">
+    <p>I had a thousand bad times    </p>
+    <p>So what's another time to me? (What's that time, yeah)    </p>
+    <p>You try to burn my house down    </p>
+    <p>But what's another house to me? (What's that time, yeah)    </p>
+    <p>'Cause I can take anything that you give me (what you give me)    </p>
+    <p>It's gonna take a lot more to kill me, bitch    </p>
+    <p>So thank you for the grave (yeah)    </p>
+    <p>I needed me a place to sleep (place to sleep)</p>
+    <p>We goin', oh   </p>
+    </div>
+
+</center>
+</body>
+</html>

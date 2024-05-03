@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sagahon Arredongo Cristian Adair 184661</title>
+        <style>
+            .segundo{
+                border: 10px solid #00F;
+                border-radius: 8px 8px 8px 8px;
+                padding-left: 35%;
+                outline: 10px solid #f06;
+                background-color: #bdFa;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="segundo">
+            <h1>JArreglos</h1>
+            <h2>ordenación</h2>
+            <p>Click en la opcion</p>
+            <button onclick="generadordearreglo()">Llenado</button>
+            <button onclick="imprimirarreglo()">Arreglo</button>
+            <button onclick="ordenarArreglo()">Ordenarlo</button> 
+            <button onclick="desordenarArreglo()">Invertido</button> 
+            <p id="demo"></p>
+        </div>
+        <script>
+            var arreglo = [0, 0, 0, 0, 0];
+            function generadordearreglo() {
+                for (var i = 0; i < arreglo.length; i++) {
+                    arreglo[i] = Math.floor(Math.random() * 100) + 1;
+                }
+            }
+            function imprimirarreglo() {
+                document.getElementById("demo").innerHTML = "Arreglo Resultante: " + arreglo;
+            }
+            function ordenarArreglo() {
+                arreglo = arreglo.sort(function(a, b) {
+                    return a - b;
+                });
+                imprimirarreglo(); 
+            }
+            function desordenarArreglo() {
+                arreglo = arreglo.reverse();
+                imprimirarreglo(); 
+            }
+        </script>
+    </body>
+</html>

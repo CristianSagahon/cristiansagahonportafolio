@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+@import url('https://fonts.googleapis.com/css?family=Gabriela');
+
+body {
+  background-image: url('fondoestrellado.jfif');
+  font-family: Arial, Helvetica, sans-serif; /* Fallback font */
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 4rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  color: #fff;
+  font-family: 'Gabriela', serif;
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  color: #faf7f7;
+  font-size: 1.125rem; /* 18px */
+}
+
+img {
+  border-radius: 15%;
+  width: 350px;
+  height: auto; /* Maintain aspect ratio */
+}
+
+div.estrofa, div.estribillo {
+  border: 3px solid;
+  border-radius: 20px 0;
+  margin: 10px 50px;
+  padding: 20px; /* Add some padding */
+}
+
+div.estrofa {
+  background-image: url('estrofa1.avif');
+  color: #fff;
+}
+
+div.estribillo {
+  background-image: url('estribillo.avif');
+  color: #000;
+}

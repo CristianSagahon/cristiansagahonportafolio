@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var intentos = 0;
+        
+        function dibujar() {
+            dibujarBrazoD();
+            dibujarBrazoI();
+            dibujarCabeza();
+            dibujarPiernaD();
+            dibujarPiernaI();
+            dibujarTorzo();
+        }
+
+        function dibujarCabeza() {
+            var canvas= document.getElementById("lienzo");
+            ctx= canvas.getContext("2d");
+
+            ctx.lineWidth=5;
+
+            ctx.fillStyle= 'Red';
+            ctx.strokeStyle='#Purple';
+
+            //Cabeza
+            ctx.beginPath();
+            ctx.arc(300, 120, 70, 0, 2*Math.PI);
+            ctx.fill();
+            ctx.stroke();
+        }
+        
+        function dibujarTorzo() {
+            var canvas= document.getElementById("lienzo");
+            ctx= canvas.getContext("2d");
+
+            ctx.lineWidth=5;
+
+            ctx.fillStyle= 'Orange';
+            ctx.strokeStyle='Green';
+
+            //Torso
+            ctx.moveTo(300, 190);
+            ctx.lineTo(300, 400);
+            ctx.stroke();
+        }
+        
+        function dibujarBrazoI() {
+            var canvas= document.getElementById("lienzo");
+            ctx= canvas.getContext("2d");
+
+            ctx.lineWidth=5;
+
+            ctx.fillStyle= 'lightgreen';
+            ctx.strokeStyle='yellow';
+
+            //Brazo I
+            ctx.moveTo(300, 250);
+            ctx.lineTo(200, 300);
+            ctx.stroke();
+        }
+        
+        function dibujarBrazoD() {
+            var canvas= document.getElementById("lienzo");
+            ctx= canvas.getContext("2d");
+
+            ctx.lineWidth=5;
+
+            ctx.fillStyle= 'yellow';
+            ctx.strokeStyle='lightgreen';
+
+            //Brazo D
+            ctx.moveTo(300, 250);
+            ctx.lineTo(400, 300);
+            ctx.stroke();
+        }
+        
+        function dibujarPiernaI() {
+            var canvas= document.getElementById("lienzo");
+            ctx= canvas.getContext("2d");
+
+            ctx.lineWidth=5;
+
+            ctx.fillStyle= 'Orange';
+            ctx.strokeStyle='#lightgreen';
+
+            //Pierna I
+            ctx.moveTo(300, 400);
+            ctx.lineTo(200, 500);
+            ctx.stroke();
+        }
+        
+        function dibujarPiernaD() {
+            var canvas= document.getElementById("lienzo");
+            ctx= canvas.getContext("2d");
+
+            ctx.lineWidth=5;
+
+            ctx.fillStyle= 'royalBlue';
+            ctx.strokeStyle='green';
+            
+            //Pierna D
+            ctx.moveTo(300, 400);
+            ctx.lineTo(400, 500);
+            ctx.stroke();
+        }
+
+        function limpiar() {
+            var canvas= document.getElementById("lienzo");
+            ctx= canvas.getContext("2d");
+            ctx.fillStyle= '#FFFFFF';
+
+            ctx.fillRect(0, 0, 600, 600);
+        }
+
+        function adivina() {
+            var palabra = document.forms[0].palabra.value;
+            var pCorrecta = "murcielago";
+
+            if (palabra == pCorrecta) {
+                alert("Palabra Corrrecta");
+            } else {
+                if (intentos == 0) {
+                    dibujarCabeza();
+                    event.preventDefault();
+                    intentos++;
+                } else if (intentos == 1) {
+                    dibujarTorzo();
+                    event.preventDefault();
+                    intentos++;
+                } else if (intentos == 2) {
+                    dibujarBrazoD();
+                    event.preventDefault();
+                    intentos++;
+                } else if (intentos == 3) {
+                    dibujarBrazoI();
+                    event.preventDefault();
+                    intentos++;
+                } else if (intentos == 4) {
+                    dibujarPiernaD();
+                    event.preventDefault();
+                    intentos++;
+                } else if (intentos == 5) {
+                    dibujarPiernaI();
+                    event.preventDefault();
+                    intentos++;
+                } else if (intentos >= 6) {
+                    alert("Haz Perdido");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <center>
+    <h1>JUEGO DEL AHORCADO PARTE 2</h1>
+    <h2>Sagahon Arredondo Cristian Adair </h2>
+</center>
+    <button onclick="dibujar()">Dibujar</button>
+    <button onclick="limpiar()">Limpiar</button>
+    <form onsubmit="return adivina();">
+        <input type="text" id="palabra">
+        <input type="submit"/>
+    </form>
+    <canvas id="lienzo" width="600" height="600" style="border: 1px solid #000000;"></canvas>
+</body>
+</html>

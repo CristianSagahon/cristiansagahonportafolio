@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<body>
+
+
+
+<div id="myPlot" style="width:100%;max-width:700px"></div>
+<div id="myPlot2" style="width:100%;max-width:700px"></div>
+<div id="myPlot3" style="width:100%;max-width:700px"></div>
+
+
+
+<script>
+
+const xArray = ["Matemáticas", "Física 1", "Programacion Web", "Programacion 1", "Nucleo 2", " Inglés VI "];
+
+const yArray = [10, 10, 10, 9.5, 9.5, 10];
+
+const xArray1 = ["Matemáticas", "Física 1", "Programacion Web", "Programacion 1", "Nucleo 2", " Inglés VI "];
+
+const yArray1 = [8.5, 10, 9.5, 8.5, 9, 10];
+
+const xArray2 = ["Matemáticas", "Física 1", "Programacion Web", "Programacion 1", "Nucleo 2", " Inglés VI "];
+
+const yArray2 = [Math.floor(Math.random()*10)+1, Math.floor(Math.random()*10)+1, Math.floor(Math.random()*10)+1, Math.floor(Math.random()*10)+1, Math.floor(Math.random()*10)+1, Math.floor(Math.random()*10)+1];
+
+
+
+const data = [{
+
+ x:xArray,
+
+ y:yArray,
+
+ type:"bar",
+
+ orientation:"v",
+
+ marker: {color:"rgba(,255,255,0.6)"}
+
+}];
+
+const data1 = [{
+
+ x:xArray1,
+
+ y:yArray1,
+
+ type:"bar",
+
+ orientation:"v",
+
+ marker: {color:"rgba(87,255,255,0.6)"}
+
+}];
+
+const data2 = [{
+    
+
+ x:xArray2,
+
+ y:yArray2,
+
+ type:"bar",
+
+ orientation:"v",
+
+ marker: {color:"rgba(7,75,78,0.6)"}
+
+}];
+
+
+
+const layout = {title:"Sagahon Arredondo Cristian Adair 184661 PARCIAL 1"};
+const layout1 = {title:"Sagahon Arredondo Cristian Adair 184661 PARCIAL 2"};
+const layout2 = {title:"Sagahon Arredondo Cristian Adair 184661 PARCIAL 3"};
+
+
+
+Plotly.newPlot("myPlot", data, layout);
+Plotly.newPlot("myPlot2", data1, layout1);
+Plotly.newPlot("myPlot3", data2, layout2);
+
+</script>
+
+
+
+</body>
+
+</html>

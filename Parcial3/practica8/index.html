@@ -1,0 +1,54 @@
+
+Translate message to: English | Never translate from: Spanish
+This message is in Spanish
+David Torres Almendárez
+​
+Cristian Adair Sagahon Arredondo
+​
+<html>
+
+<head>
+
+  <title>Bienvenida del usuario</title>
+<style>
+  p{
+    color: rgb(42, 204, 196);
+  }
+</style>
+  <script type = "text/javascript">
+
+  function alertName() {
+/*parseint pasa lo q esta en parentesis a entero; (document.forms[0].veces.value) es una direcccion muy especifica*/
+    var filas1= parseInt(document.forms[0].filas.value);/*var declara variables y function para declarar funciones*/
+    var columnas1= parseInt(document.forms[0].columnas.value);
+    document.write("<table border=1>");
+    for(i=1;i<=filas1;i++)
+    {
+        document.write("<tr>");
+        for(j=1;j<=columnas1;j++)
+        {
+        document.write("<td>celda</td>");
+        }
+/*escribe una linea en la pagina web*/
+    document.write("</tr>");
+        }
+    document.write("</table>");
+    return true;
+/*windows+flecha der para abrir dos ventanas al mismo tiempo*/
+  }
+  </script>
+
+</head>
+
+<body>
+
+<form id="myform" onsubmit="return alertName();">
+<p>Cuantas filas <input id="filas" name="filas" type="text" /></p>
+<p>Cuantas columnas <input id="columnas" name="columnas" type="text" /></p>
+<p><input type="submit" /></p>
+</form>
+
+</body>
+
+</html>
+

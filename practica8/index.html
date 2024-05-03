@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenida del usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 40px;
+            color: #333;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            margin: 10px 0;
+        }
+        input[type="text"] {
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            padding: 8px;
+            width: 150px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        function generateTable() {
+            var filas = parseInt(document.getElementById('filas').value, 10);
+            var columnas = parseInt(document.getElementById('columnas').value, 10);
+            var resultDiv = document.getElementById('result');
+
+            // Limpiar resultados anteriores
+            resultDiv.innerHTML = '';
+
+            if (!isNaN(filas) && !isNaN(columnas)) {
+                var table = document.createElement('table');
+                for (var i = 0; i < filas; i++) {
+                    var tr = document.createElement('tr');
+                    for (var j = 0; j < columnas; j++) {
+                        var td = document.createElement('td');
+                        td.appendChild(document.createTextNode('celda'));
+                        tr.appendChild(td);
+                    }
+                    table.appendChild(tr);
+                }
+                resultDiv.appendChild(table);
+            } else {
+                resultDiv.innerHTML = '<p>Por favor, introduce números válidos.</p>';
+            }
+
+            return false; // Evitar la recarga de la página
+        }
+    </script>
+</head>
+<body>
+    <form id="myform" onsubmit="return generateTable();">
+        <p>Cuántas filas: <input id="filas" name="filas" type="text"></p>
+        <p>Cuántas columnas: <input id="columnas" name="columnas" type="text"></p>
+        <p><input type="submit" value="Generar Tabla"></p>
+    </form>
+    <div id="result"></div>
+</body>
+</html>

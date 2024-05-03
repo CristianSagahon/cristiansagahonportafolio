@@ -1,0 +1,48 @@
+<html>
+
+<head>
+
+  <title>Bienvenida del usuario</title>
+
+  <script type = "text/javascript">
+
+  function alertName() {/*Se declara la funcion con 'function'*/
+    /* Se usa el let en lugar del var*/
+    var veces1= parseInt(document.forms[0].veces.value);/*Se declaran las variables con var*/
+    /*'parseInt' es para convertir en entero*/
+    for(i=1;i<=veces1;i++)
+
+    {
+
+      document.write("<p>Este es un párrafo</p>");
+
+    }
+
+    return true;
+
+  }
+
+  </script>
+<style>
+#myform{
+  color: aqua;
+}
+  p{
+    color: rgba(91, 36, 180);
+  }
+</style>
+</head>
+
+<body>
+                  <!--onsubmit sirve para retornar el valor-->
+<form id="myform" onsubmit="return alertName();">
+                        <!--Llamar ek 'id' y el 'nombre' de igual manera-->
+<p>Cuantos párrafos <input id="veces" name="veces" type="text" /></p>
+
+<p><input type="submit" /></p>
+
+</form>
+
+</body>
+
+</html>

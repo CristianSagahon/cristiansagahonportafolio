@@ -1,0 +1,67 @@
+EJERCICIO 2:
+
+<!DOCTYPE html>
+
+<html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<body>
+
+
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+
+
+<script>
+
+const xValues = ["Matemáticas", "Física 1", "Programacion Web", "Programacion 1", "Nucleo 2", " Inglés VI "];
+
+const yValues = [Math.floor(Math.random()*10)+1, Math.floor(Math.random()*10)+1, Math.floor(Math.random()*10)+1, Math.floor(Math.random()*10)+1, Math.floor(Math.random()*10)+1, Math.floor(Math.random()*10)+1,0];
+
+const barColors = ["lightblue", "purple","royalblue","orange","brown","red"];
+
+
+
+new Chart("myChart", {
+
+ type: "bar",//Contructor
+
+ data: {
+
+  labels: xValues,
+
+  datasets: [{
+
+   backgroundColor: barColors,
+
+   data: yValues
+
+  }]
+
+ },
+
+ options: {
+
+  legend: {display: false},
+
+  title: {
+
+   display: true,
+
+   text: "World Wine Production 2018"
+
+  }
+
+ }
+
+});
+
+</script>
+
+
+
+</body>
+
+</html>

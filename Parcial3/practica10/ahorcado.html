@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego del Ahorcado</title>
+</head>
+<body>
+    <h1>Juego del Ahorcado</h1>
+    <p>Intenta adivinar la palabra:</p>
+    <p id="wordToGuess"></p>
+    <p>
+        <label for="guess">Ingresa una letra:</label>
+        <input type="text" id="guess" maxlength="1">
+        <button onclick="makeGuess()">Adivinar</button>
+    </p>
+    <p id="message"></p>
+</body>
+<script src="hangman.js"></script>
+</html>

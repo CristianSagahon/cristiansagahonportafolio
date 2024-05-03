@@ -1,0 +1,50 @@
+<html>
+
+<head>
+
+  <title>Bienvenida del usuario</title>
+
+  <script type = "text/javascript">
+
+  function alertName() {/*Se declara la funcion con 'function'*/
+    /* Se usa el let en lugar del var*/
+    var filas1= parseInt(document.forms[0].filas.value);/*Se declaran las variables con var*/
+    var cols1= parseInt(document.forms[0].cols.value);/*Se declaran las variables con var*/
+    var numale=1;
+    document.write("<table border=2");
+    for(i=1;i<=filas1;i++){
+        document.write("<tr>");
+    for(j=1;j<=cols1;j++)
+    {
+        numale=Math.floor(Math.random()*100)+1;
+        document.write("<td>",numale,"</td>");
+
+    }
+    document.write("</tr>");
+    }
+    document.write("</table>");
+    return true;
+
+  }
+
+  </script>
+<style>
+  p{
+    color: rgba(91, 36, 180);
+  }
+</style>
+</head>
+
+<body>
+
+<form id="myform" onsubmit="return alertName();">
+<p>Cuantos columnas <input id="filas" name="filas" type="text" /></p>
+<p>Cuantos filas <input id="cols" name="cols" type="text" /></p>
+
+<p><input type="submit" /></p>
+
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+var canvas = document.getElementById('miCanvas');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.arc(250, 90, 50, 0, 2 * Math.PI, false);
+ctx.fillStyle = 'transparent';
+ctx.fill();
+ctx.stroke();
+ctx.fillStyle = 'red';
+ctx.fillRect(250, 140, 5, 150);
+ctx.fillStyle = 'red';
+ctx.fillRect(250, 140, 5, 150);

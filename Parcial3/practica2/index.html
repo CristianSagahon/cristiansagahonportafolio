@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar a cuenta</title>
+    <script type="text/javascript">
+        function validar(){
+     var usuario= document.forms[0].usuario.value;/*Se declaran las variables con var*/
+    var Password= document.forms[0].pass.value;/*Se declaran las variables con var*/
+        if((usuario=="admin")&&(Password=="admin")){
+            document.write("Acceso Permitido <br>");
+            document.write("<a href=https://portafolioweb1saca.000webhostapp.com/>ir a portafolio</a>")
+        }
+        else{
+            document.write("Acceso Denegado <br>");
+            document.write("<a href=https://portafolioweb1saca.000webhostapp.com/practica1.html/>ir a portafolio</a>")
+        }
+        return true;
+    }
+
+    </script>
+    <style>
+        form{
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form id="myform" onsubmit="return validar();">
+    <p>usuario <input id="usuario" name="usuario" type="text"/></p>
+    <p>Password <input id="pass" name="pass" type="password"/></p>
+    <p><input type="submit"/></p>    
+</form>
+</body>
+</html>

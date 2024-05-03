@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Ejercicios</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Menú</h1>
+        <p>Click en la opción</p>
+        <button onclick="ejercicio1()">Ejercicio 1</button>
+        <button onclick="ejercicio2()">Ejercicio 2</button>
+        <button onclick="ejercicio3()">Ejercicio 3</button>
+        <button onclick="ejercicio4()">Ejercicio 4</button>
+        <button onclick="ejercicio5()">Ejercicio 5</button>
+        <button onclick="ejercicio6()">Ejercicio 6</button>
+        <button onclick="ejercicio7()">Ejercicio 7</button>
+        <button onclick="ejercicio8()">Ejercicio 8</button>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        function ejercicio1(){
+            document.getElementById("demo").innerHTML= "<a href='https://portafolioweb1saca.000webhostapp.com/Parcial3/practica1/ejercicio1js.html'> Ejercicio 1</a>"  
+        }
+        function ejercicio2(){
+            document.getElementById("demo").innerHTML= "<a href='https://portafolioweb1saca.000webhostapp.com/practica8/index.html'> Ejercicio 2</a>"  
+        }
+        function ejercicio3(){
+            document.getElementById("demo").innerHTML= "<a href='https://portafolioweb1saca.000webhostapp.com/Parcial3/practica1/tabla.html'> Ejercicio 3</a>"  
+        }
+        function ejercicio4(){
+            document.getElementById("demo").innerHTML= "<a href='https://portafolioweb1saca.000webhostapp.com/Parcial3/practica4/index.html'> Ejercicio 4</a>"  
+        }
+        function ejercicio5(){
+            document.getElementById("demo").innerHTML= "<a href='https://portafolioweb1saca.000webhostapp.com/Parcial3/practica3/index.html'> Ejercicio 5</a>"  
+        }
+        function ejercicio6(){
+            document.getElementById("demo").innerHTML= "<a href='https://portafolioweb1saca.000webhostapp.com/Parcial3/practica2/index.html'> Ejercicio 6</a>"  
+        }
+        function ejercicio7(){
+            document.getElementById("demo").innerHTML= "<a href='https://portafolioweb1saca.000webhostapp.com/Parcial3/practica2/index.html'> Ejercicio 7</a>"  
+        }
+        function ejercicio8(){
+            document.getElementById("demo").innerHTML= "<a href='https://portafolioweb1saca.000webhostapp.com/practica7/index.html'> Ejercicio 8</a>"  
+        }
+    </script>
+</body>
+</html>

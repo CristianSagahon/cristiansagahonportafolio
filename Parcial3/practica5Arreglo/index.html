@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion de temperatura</title>
+    <script type="text/javascript">
+        function convertir(){
+     var temp= parseInt(document.forms[0].temp.value);/*Se declaran las variables con var*/
+     var opc=document.forms[0].conver.value;
+        if(opc==1){//Se pone el valor de value en el condicional
+           document.write("En farenheit es: ",temp*1.8+32);
+        }else if(opc==2){
+            document.write("En kelvin es: ",temp +273.15);
+        }
+        return true;
+    }
+
+    </script>
+    <style>
+        form{
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form id="myform" onsubmit="return convertir();">
+    <p>Temperatira en C° <input id="temp" name="temp" type="number"/></p>
+    <select name="conver" ><!--Se pone el valor de value en el condicional-->
+        <option value="1 ">Fahrenheit </option>
+        <option value="2 ">Kelvin</option>
+    </select>
+    <p><input type="submit"/></p>    
+</form>
+</body>
+</html>
