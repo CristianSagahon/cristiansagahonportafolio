@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    label {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <form id="formulario">
+    <label for="funcion">Función:</label>
+    <select id="funcion" name="funcion">
+      <option value="Math.sin(x)">Seno</option>
+      <option value="Math.cos(x)">Coseno</option>
+      <option value="Math.tan(x)">Tangente</option>
+      <option value="Math.tanh(x)">Contangente</option>
+    </select>
+    <label for="inicio">Inicio:</label>
+    <input type="number" id="inicio" name="inicio" value="-10">
+    <label for="fin">Fin:</label>
+    <input type="number" id="fin" name="fin" value="10">
+    <button type="submit">Actualizar</button>
+  </form>
+  <div id="myPlot" style="width:100%;max-width:700px"></div>
+
+  <script>
+    // Genera las expresiones de "x" y "y" 
+    function generarValores(expresion, inicio, fin) {
+      const xValues = [];
+      const yValues = [];
+      for (let x = inicio; x <= fin; x += 0.1) {
+        xValues.push(x);
+        yValues.push(eval(expresion));
+      }
+      return {x: xValues, y: yValues};
+    }
+
+    //Regenera el formulario 
+    document.getElementById("formulario").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evitar que el formulario se envíe
+        const funcion = document.getElementById("funcion").value;
+      const inicio = parseInt(document.getElementById("inicio").value);
+      const fin = parseInt(document.getElementById("fin").value);
+      const valores = generarValores(funcion, inicio, fin);
+
+      // Actualizar la gráfica
+      Plotly.react("myPlot", [{x: valores.x, y: valores.y, mode: "lines"}], {title: "f(x) = " + funcion});
+    });
+
+
+    // Mostrar la gráfica inicial
+    Plotly.newPlot("myPlot", [{x: valoresIniciales.x, y: valoresIniciales.y, mode: "lines"}], {title: "f(x) = " + funcion});
+  </script>
+</body>
+</html>
