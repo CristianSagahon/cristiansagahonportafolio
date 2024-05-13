@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <iframe frameborder="0" width="500" height="400"></iframe>
+    <script>
+ var doc = new jsPDF();
+
+doc.rect(20, 20, 10, 10); // empty square
+
+doc.rect(40, 20, 10, 10, 'F'); // filled square
+
+doc.setDrawColor(255,0,0);
+doc.rect(60, 20, 10, 10); // empty red square
+
+doc.setDrawColor(255,0,0);
+doc.rect(80, 20, 10, 10, 'FD'); // filled square with red borders
+
+doc.setDrawColor(0);
+doc.setFillColor(255,0,0);
+doc.rect(100, 20, 10, 10, 'F'); // filled red square
+
+doc.setDrawColor(0);
+doc.setFillColor(255,0,0);
+doc.rect(120, 20, 10, 10, 'FD'); // filled red square with black borders
+
+doc.setDrawColor(0);
+doc.setFillColor(255, 255, 255);
+doc.roundedRect(140, 20, 10, 10, 3, 3, 'FD'); //  Black sqaure with rounded corners
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+    </script>
+</body>
+</html>

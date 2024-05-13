@@ -1,0 +1,46 @@
+<!doctype>
+<html>
+<head>
+	<title>jsPDF</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+
+</head>
+
+<body>
+<iframe frameborder="0" width="500" height="400"></iframe><!--Es un iframe para que le de un scroll-->
+<script>
+$(document).ready(function() {
+
+var doc = new jsPDF();//Doc es un constructor
+var dato1=20;
+var dato2=50;
+var suma=dato1+dato2;
+var texto="";
+texto="El resultado de sumar: "+dato1+" y "+dato+" es: "+suma;
+doc.setFontSize(20);//Por pulgadas
+doc.text(40, 20, "Cristian Adair Sagahon Arredondo");
+doc.text(40, 40, "Programación Web I");
+doc.text(40, 50, texto);
+
+//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+
+});
+</script>
+
+</body>
+</html>
