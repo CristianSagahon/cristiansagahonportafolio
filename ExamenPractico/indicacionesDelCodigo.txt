@@ -1,0 +1,4 @@
+Tienes que hacer un programa que haga un algoritmo de inscripcion se llama sustitución,
+solicita al usuario un texto que se va codificar de 1 a 100 caracteres, lo que se hacer es buscar letra por letras de acuerdo a la clave de
+sustitucion, lo que no se codifican son los espacios, la salida debe ser en pantalla y tambien en un pdf y que cuando se imprima 
+escriba la palabra original y escriba la palabra codificado, pero usa un iframe para que imprima en la misma pantalla. 

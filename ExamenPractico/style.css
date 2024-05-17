@@ -1,0 +1,18 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+label, input, button {
+    display: block;
+    margin-top: 10px;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+}
